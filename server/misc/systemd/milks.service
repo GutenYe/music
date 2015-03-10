@@ -1,0 +1,13 @@
+[Unit]
+Description=milk api server
+
+[Service]
+Type=forking
+PIDFile=/apps/milks/shared/pids/unicorn.pid
+WorkingDirectory=/apps/milks/current
+ExecStart=/usr/bin/bundle exec unicorn_rails -c config/unicorn.rb -E production -D
+ExecReload=/bin/kill -s USR2 $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+
+[Install]
+WantedBy=multi-user.target

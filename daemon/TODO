@@ -1,0 +1,19 @@
+systemd errror, always get this error using systemd.
+
+	 playing http://api.milk.priv/uploads/music/1/01_Adele_-_Rolling_In_The_Deep.flac
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 64 [0 0 0 0] 18446744073...STATE_CHANGED
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 64 [0 0 0 0] 18446744073...STATE_CHANGED
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 64 [0 0 0 0] 18446744073...STATE_CHANGED
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 64 [0 0 0 0] 18446744073...STATE_CHANGED
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 64 [0 0 0 0] 18446744073...STATE_CHANGED
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 64 [0 0 0 0] 18446744073...STATE_CHANGED
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 64 [0 0 0 0] 18446744073...STATE_CHANGED
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 8192 [0 0 0 0] 184467440...STREAM_STATUS
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 64 [0 0 0 0] 18446744073...STATE_CHANGED
+	 onGstMessage &{{{0x2966b70} 2 0 <nil>} <nil> <nil> 8192 [0 0 0 0] 184467440...STREAM_STATUS
+	 runtime: signal received on thread not created by Go.
+	a.service: main process exited, code=dumped, status=11/SEGV
+
+runtime: signal received on thread not created by Go.
+
+run by sudo get this error, by normal user is ok.

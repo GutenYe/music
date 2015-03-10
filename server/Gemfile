@@ -1,0 +1,27 @@
+source "https://rubygems.org"
+
+# fix bundle invalid byte sequence in US-ASCII (ArgumentError)
+if RUBY_VERSION =~ /1.9/
+  Encoding.default_external = Encoding::UTF_8
+  Encoding.default_internal = Encoding::UTF_8
+end
+
+gem "pd"
+#gem "rails", "3.2.11"
+gem "rails", "4.0.0"
+gem "rails-api"
+gem "pg"
+gem "active_model_serializers", :git => "git://github.com/rails-api/active_model_serializers.git"
+gem "rack-cors", :require => "rack/cors"
+gem "carrierwave"
+gem "carrierwave-video"
+gem "ruby-audioinfo", :require => "audioinfo"
+
+group :development do
+  gem "capistrano"
+  gem "foreman", :git => "git://github.com/bfulton/foreman.git"
+end
+
+group :production do
+  gem "unicorn"
+end

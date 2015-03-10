@@ -1,0 +1,12 @@
+[Unit]
+Description=milkd server
+
+[Service]
+Type=simple
+User=%i
+ExecStart=/usr/bin/milkd --http=unix:///var/${USER}/run/milkd.sock --log=/var/${USER}/log/milkd.log --server=http://api.milk.priv
+#ExecStart=/usr/bin/milkd --http=:2202 ...
+ExecStop=/bin/kill -s KILL $MAINPID
+
+[Install]
+WantedBy=multi-user.target
